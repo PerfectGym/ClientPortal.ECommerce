@@ -84,7 +84,7 @@
             <!-- Navigation -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul role="menu" aria-label="About" class="navbar-nav mr-auto">
-                    <li role="none" class="nav-item active">
+                    <li role="none" class="nav-item">
                         <a class="nav-link" role="menuitem" href="index.html" tabindex="-1">
                             Basic demo
                         </a>
@@ -96,13 +96,13 @@
                         </a>
                     </li>
 
-                    <li role="none" class="nav-item">
+                    <li role="none" class="nav-item active">
                         <a class="nav-link" role="menuitem" href="singleClub.html" tabindex="-1">
                             Single club
                         </a>
                     </li>
                 </ul>
-                <a href="https://github.com/PerfectGym/ClientPortal.ECommerce/tree/master/docs/index.html" class="btn btn-link my-2">See this demo code</a>
+                <a href="https://github.com/PerfectGym/ClientPortal.ECommerce/tree/master/docs/singleClub.html" class="btn btn-link my-2">See this demo code</a>
                 <a href="https://github.com/PerfectGym/ClientPortal.ECommerce" class="btn btn-primary my-2 my-sm-0">See github documentation</a>
             </div>
         </div>
@@ -111,12 +111,21 @@
     <!--- Text container -->
     <section class="jumbotron ">
         <div class="container">
-            <h2 class="jumbotron-heading mb-4">Basic embeding demo</h2>
+            <h2 class="jumbotron-heading mb-4">Single club embeding demo</h2>
 
-            <p>In basic embeding two parameters are reqired: </p>  
-            <ul class="mb-4">
+            <p>When you want to have the same flow used for many clubs, but have single page for each club, then you can add <strong>clubId</strong> 
+                parameter. Thanks to it <i>Pick location</i> step will be skipped and user won't be able to change club in reservation process.</p> 
+            <p>
+                Fastest way to obtain <strong>clubId</strong> is to check requests on <i>Pick Location</i> step in debug's console network panel. 
+                Inside request named <i>GetClubs</i> you have a list with clubs names and id's.
+            </p> 
+            <p class="mb-1">
+                Init parameters required to configure flow for single club:
+            </p>
+            <ul>
                     <li><strong>flowId</strong> -  id of the e-commerce flow, this is always a string, you can find it in URL</li>
                     <li><strong>element</strong> - html element or CSS selector to render the ecommerce</li>
+                    <li><strong>clubId</strong> - URL that you want to redirect to after payment</li>
             </ul>
 
             <pre class="prettyprint lang-html text-left pl-4 pt-4" style="border-color: #ddd; border-radius: 4px; background: white">
@@ -131,7 +140,8 @@
     &lt;script&gt;
         PerfectGym.ECommerce.init({
             flowId: 'b64d45ff3',
-            element: '#main'
+            element: '#main',
+            clubId: 9
         });
     &lt;/script&gt;
 &lt;/body&gt;
@@ -152,7 +162,8 @@
     <script>
         PerfectGym.ECommerce.init({
             flowId: 'b64d45ff3',
-            element: '#main'
+            element: '#main',
+            clubId: 9
         });
     </script>
 

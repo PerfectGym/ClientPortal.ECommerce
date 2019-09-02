@@ -84,13 +84,13 @@
             <!-- Navigation -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul role="menu" aria-label="About" class="navbar-nav mr-auto">
-                    <li role="none" class="nav-item active">
+                    <li role="none" class="nav-item">
                         <a class="nav-link" role="menuitem" href="index.html" tabindex="-1">
                             Basic demo
                         </a>
                     </li>
 
-                    <li role="none" class="nav-item">
+                    <li role="none" class="nav-item active">
                         <a class="nav-link" role="menuitem" href="returnUrl.html" tabindex="-1">
                             With return url
                         </a>
@@ -102,7 +102,7 @@
                         </a>
                     </li>
                 </ul>
-                <a href="https://github.com/PerfectGym/ClientPortal.ECommerce/tree/master/docs/index.html" class="btn btn-link my-2">See this demo code</a>
+                <a href="https://github.com/PerfectGym/ClientPortal.ECommerce/tree/master/docs/returnUrl.html" class="btn btn-link my-2">See this demo code</a>
                 <a href="https://github.com/PerfectGym/ClientPortal.ECommerce" class="btn btn-primary my-2 my-sm-0">See github documentation</a>
             </div>
         </div>
@@ -111,13 +111,15 @@
     <!--- Text container -->
     <section class="jumbotron ">
         <div class="container">
-            <h2 class="jumbotron-heading mb-4">Basic embeding demo</h2>
+            <h2 class="jumbotron-heading mb-4">Embeding demo with return url</h2>
 
-            <p>In basic embeding two parameters are reqired: </p>  
-            <ul class="mb-4">
+            <p>If you want user to be redirected back to your page from payment gate then you need to init flow with 3 parameters:</p>  
+            <ul>
                     <li><strong>flowId</strong> -  id of the e-commerce flow, this is always a string, you can find it in URL</li>
                     <li><strong>element</strong> - html element or CSS selector to render the ecommerce</li>
+                    <li><strong>returnUrl</strong> - URL that you want to redirect to after payment</li>
             </ul>
+            <p class="mb-4">If <strong>returnUrl</strong> wasn't defined then user will end up reservation process on our <i>Thank you page</i>.</p>
 
             <pre class="prettyprint lang-html text-left pl-4 pt-4" style="border-color: #ddd; border-radius: 4px; background: white">
 &lt;head&gt;
@@ -131,7 +133,8 @@
     &lt;script&gt;
         PerfectGym.ECommerce.init({
             flowId: 'b64d45ff3',
-            element: '#main'
+            element: '#main',
+            returnUrl: 'https://github.com/PerfectGym/ClientPortal.ECommerce'
         });
     &lt;/script&gt;
 &lt;/body&gt;
@@ -152,7 +155,8 @@
     <script>
         PerfectGym.ECommerce.init({
             flowId: 'b64d45ff3',
-            element: '#main'
+            element: '#main',
+            returnUrl: 'https://github.com/PerfectGym/ClientPortal.ECommerce'
         });
     </script>
 
