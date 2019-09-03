@@ -2,6 +2,16 @@
 
 You can embedd E-commerce module to be a part of your own site.
 
+## DEMO
+
+[Basic](https://perfectgym.github.io/ClientPortal.ECommerce/)
+
+[Redirecting from payment gate back to your page after payment](https://perfectgym.github.io/ClientPortal.ECommerce/returnUrl)
+
+[Narrowing flow config to single club](https://perfectgym.github.io/ClientPortal.ECommerce/singleClub)
+
+[Basic demo without usage of external liblaries, that shows only code required for embeding)](https://perfectgym.github.io/ClientPortal.ECommerce/plain)
+
 ## Find ecommerce flow you want to embed
 Go the the list of configured flows:
 
