@@ -43,9 +43,11 @@ Include an SDK:
 Put this script somewhere at the end of your website `<body>` tag.
 
 > Enter the script URL as is, do not download it and do not host it on your server!
+> 
 > This script may change when releasing new version of ClientPortal.
 
 You can specify a language for the ecommerce flow.
+
 To do so, add `lang` query parameter with language of your choice (short ISO language code), for example:
 
 ```html
@@ -53,7 +55,9 @@ To do so, add `lang` query parameter with language of your choice (short ISO lan
 ```
 
 It works only for languages, that are enabled for your company.
+
 If you are not sure, what are available languages, go into PGM and try to change the language:
+
 ![Language list](./public/img/LanguageList.png)
 
 If no language is specified, ClientPortal will try to load scripts for the language of the browser,
