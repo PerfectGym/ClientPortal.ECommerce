@@ -71,6 +71,7 @@ Run the initialization script. It has several parameters:
 -   `element` (required) - html element or element CSS selector to render the ecommerce to
 -   `clubId` (optional) - if you have multiple clubs, you can force to choose a specific one
 -   `returnUrl` (optional) - URL that you want to redirect to after the transaction is complete successfully or failed
+-   `date` (optional) - force specific date on the calendar (will only work for dates in the future)
 
 For example:
 
@@ -79,7 +80,8 @@ PerfectGym.ECommerce.init({
     flowId: '9e7eadc518',
     element: '#ecommerce',
     clubId: 1,
-    returnUrl: 'https://my-club-site.com/thank-you-page.html'
+    returnUrl: 'https://my-club-site.com/thank-you-page.html',
+    date: '2022-01-01'
 });
 ```
 
